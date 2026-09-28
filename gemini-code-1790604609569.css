@@ -1,0 +1,230 @@
+:root {
+    --primary-color: #2b5876;
+    --secondary-color: #4e4376;
+    --correct-color: #2e7d32;
+    --incorrect-color: #c62828;
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    margin-top: 0;
+    color: #666;
+}
+
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 8px;
+    margin-top: 30px;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.question-card {
+    background: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+
+.question-text {
+    font-weight: bold;
+    font-size: 1.05em;
+    margin-bottom: 10px;
+}
+
+.context-sentence {
+    font-style: italic;
+    color: #444;
+    background: #edf2f7;
+    padding: 10px 14px;
+    border-left: 4px solid var(--primary-color);
+    margin-bottom: 12px;
+    border-radius: 0 4px 4px 0;
+}
+
+.options-list {
+    list-style: none;
+    padding: 0;
+}
+
+.option-btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.95em;
+}
+
+.option-btn:hover:not(:disabled) {
+    background-color: #e8f0fe;
+    border-color: var(--primary-color);
+}
+
+.option-btn.correct {
+    background-color: #d4edda !important;
+    border-color: var(--correct-color) !important;
+    color: var(--correct-color) !important;
+    font-weight: bold;
+}
+
+.option-btn.incorrect {
+    background-color: #f8d7da !important;
+    border-color: var(--incorrect-color) !important;
+    color: var(--incorrect-color) !important;
+    font-weight: bold;
+}
+
+.explanation {
+    margin-top: 12px;
+    padding: 12px 16px;
+    background-color: #eaf4fe;
+    border-left: 4px solid #2196f3;
+    border-radius: 4px;
+    font-size: 0.95em;
+}
+
+/* C-Test Styling */
+.ctest-text {
+    line-height: 2.3;
+    font-size: 1.05em;
+    background: #fdfdfd;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.ctest-input {
+    width: 90px;
+    padding: 4px 6px;
+    font-size: 0.95em;
+    border: 1px solid #999;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.ctest-input.correct-input {
+    border-color: var(--correct-color);
+    background-color: #d4edda;
+    color: var(--correct-color);
+}
+
+.ctest-input.incorrect-input {
+    border-color: var(--incorrect-color);
+    background-color: #f8d7da;
+    color: var(--incorrect-color);
+}
+
+/* C-Test Explanations Cards */
+.ctest-exp-container {
+    margin-top: 30px;
+}
+
+.ctest-card {
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    background: #fff;
+}
+
+.ctest-card.is-correct {
+    border-left: 5px solid var(--correct-color);
+    background-color: #f4faf4;
+}
+
+.ctest-card.is-incorrect {
+    border-left: 5px solid var(--incorrect-color);
+    background-color: #fff8f8;
+}
+
+.ctest-card-header {
+    font-weight: bold;
+    font-size: 1em;
+    margin-bottom: 6px;
+}
+
+.ctest-card-body {
+    font-size: 0.92em;
+    color: #444;
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: opacity 0.2s;
+}
+
+.btn-submit:hover {
+    opacity: 0.9;
+}
+
+.download-box {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 2px dashed #ccc;
+    text-align: center;
+}
+
+.btn-download {
+    background-color: #2e7d32;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-download:hover {
+    background-color: #1b5e20;
+}
+
+.hidden {
+    display: none;
+}

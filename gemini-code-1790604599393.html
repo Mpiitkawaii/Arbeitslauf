@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz & C-Test Bahasa Jerman: Die erste Woche im Büro</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>🇩🇪 Quiz & C-Test Bahasa Jerman</h1>
+    <p class="subtitle"><strong>Topik:</strong> Die erste Woche im Büro</p>
+
+    <!-- SECTION 1: KOSAKATA -->
+    <div id="vocab-section" class="section">
+        <h2>1. Quiz Kosakata</h2>
+        <div id="vocab-questions"></div>
+    </div>
+
+    <!-- SECTION 2: GRAMMATIK -->
+    <div id="grammar-section" class="section">
+        <h2>2. Quiz Grammatik</h2>
+        <div id="grammar-questions"></div>
+    </div>
+
+    <button id="btn-to-ctest" class="btn-submit" onclick="showCTestSection()">Lanjut ke C-Test ➔</button>
+
+    <!-- SECTION 3: C-TEST -->
+    <div id="ctest-section" class="section hidden">
+        <h2>3. C-Test: Meine erste Woche</h2>
+        <p>Lengkapi bagian kata yang hilang di bawah ini:</p>
+        
+        <div class="ctest-text" id="ctest-container">
+            Am Montag begann meine erste Woche im neuen Büro. Ich war etwas nervös, 
+            ab<input type="text" class="ctest-input" data-id="1"> meine neuen Kollegen waren sehr freundlich. Zuerst 
+            zei<input type="text" class="ctest-input" data-id="2"> mir meine Chefin den Arbeitsplatz und 
+            erkl<input type="text" class="ctest-input" data-id="3"> mir, welche Aufgaben ich übernehmen sollte. Danach 
+            ler<input type="text" class="ctest-input" data-id="4"> ich das Team kennen, mit dem ich in den nächsten Monaten 
+            zusammen<input type="text" class="ctest-input" data-id="5"> werde. Am Dienstag 
+            na<input type="text" class="ctest-input" data-id="6"> ich an einer Besprechung teil. Dort wurden einige wichtige Themen 
+            bespr<input type="text" class="ctest-input" data-id="7">, und ich durfte auch meine 
+            Mei<input type="text" class="ctest-input" data-id="8"> äußern. Obwohl ich noch wenig 
+            Erfa<input type="text" class="ctest-input" data-id="9"> hatte, fühlte ich mich immer 
+            sich<input type="text" class="ctest-input" data-id="10">. Meine Kollegin half mir, wenn ich etwas nicht 
+            verst<input type="text" class="ctest-input" data-id="11"> hatte, und erklärte mir die 
+            Arbeits<input type="text" class="ctest-input" data-id="12">. Am Mittwoch 
+            bek<input type="text" class="ctest-input" data-id="13"> ich meine erste eigene Aufgabe. Ich musste einen kurzen 
+            Ber<input type="text" class="ctest-input" data-id="14"> schreiben und anschließend an meine Chefin 
+            schi<input type="text" class="ctest-input" data-id="15">. Zuerst war ich unsicher, aber ich 
+            kon<input type="text" class="ctest-input" data-id="16"> die Aufgabe rechtzeitig 
+            erle<input type="text" class="ctest-input" data-id="17">. Am Ende der Woche 
+            mer<input type="text" class="ctest-input" data-id="18"> ich, dass ein neuer Arbeitsplatz zwar anstrengend sein kann, aber auch viele 
+            Mögli<input type="text" class="ctest-input" data-id="19"> bietet, neue 
+            Erfah<input type="text" class="ctest-input" data-id="20"> zu sammeln.
+        </div>
+
+        <button class="btn-submit" onclick="checkCTest()">Periksa Jawaban C-Test</button>
+
+        <!-- CONTAINER UNTUK PENJELASAN PER SOAL -->
+        <div id="ctest-explanations-list" class="ctest-exp-container hidden">
+            <h3>💡 Penjelasan Detail Per Soal (Grammatik & Wortschatz):</h3>
+            <div id="ctest-cards"></div>
+        </div>
+    </div>
+
+    <!-- FEATURE DOWNLOAD CODE -->
+    <div class="download-box">
+        <button id="btn-download" class="btn-download" onclick="downloadProjectZip()">📥 Download Source Code (.ZIP)</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
